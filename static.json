@@ -1,11 +1,17 @@
 {
   "root": "build/",
+  "clean_urls": true,
   "routes": {
     "/**": "index.html"
   },
   "https_only": true,
   "headers": {
     "/**": {
+      "Strict-Transport-Security": "max-age=31557600",
+      "X-Frame-Options": "DENY",
+      "X-Content-Type-Options": "nosniff",
+      "X-XSS-Protection": "1; mode=block",
+      "Referrer-Policy": "no-referrer-when-downgrade",
       "Access-Control-Allow-Origin": "*"
     }
   }
