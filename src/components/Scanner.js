@@ -41,7 +41,7 @@ const Scanner = () => {
     setScanning(true);
 
     try {
-      const baseUrl = 'http://localhost:8000';
+      const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
       
       // Fetch subdomains
       const subdomainsResponse = await fetch(`${baseUrl}/scan/subdomains`, {
