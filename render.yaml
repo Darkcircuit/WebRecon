@@ -12,8 +12,8 @@ services:
   # Frontend service
   - type: web
     name: web-recon-frontend
-    env: static
-    buildCommand: npm install && npm run build
+    env: node
+    buildCommand: npm ci && npm run build
     staticPublishPath: ./build
     envVars:
       - key: NODE_VERSION
